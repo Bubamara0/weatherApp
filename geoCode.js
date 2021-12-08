@@ -38,19 +38,3 @@ module.exports = geoCode;
 
 
 
-
-
-
-
-// const fetchPokemon = async (pokemon) => {
-//     const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-
-//     try {
-//         const { data: {abilities} } = await axios(urlPokemon);
-//         abilities.forEach(({ability}) => console.log(ability.name))
-//     } catch (err){
-//         console.log(err.message)
-//     }
-// }
-
-// fetchPokemon(process.argv[2]);
