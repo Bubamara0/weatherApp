@@ -1,6 +1,8 @@
-const geoLoc1 = require('./geoCode.js')
+require('dotenv').config()
 
-geoLoc1(process.argv[2])
+const geoCode = require('./geoCode.js')
+
+geoCode(process.argv[2])
 
 
 

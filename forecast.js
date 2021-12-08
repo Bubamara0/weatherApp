@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 const axios = require('axios')
 
 
-const foreCast = async (lat, lon) => {
+const forecast = async (lat, lon) => {
     const urlTemp = ` http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=fecb63f5e33ead6599ddb965cb4f41bf `
     try {
             const {data} = await axios(urlTemp);
@@ -15,6 +17,6 @@ const foreCast = async (lat, lon) => {
 }
 
 
-module.exports = foreCast;
+module.exports = forecast;
 
 
