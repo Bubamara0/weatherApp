@@ -3,7 +3,9 @@ const foreCast = require('./forecast.js')
 
 
 const geoCode = async (cityName) => {
-    const urlLoc = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=fecb63f5e33ead6599ddb965cb4f41bf`; 
+    const api_key = process.env.DB_KEY
+    const urlLoc = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${api_key}`; 
+    
     if (process.argv[2] != null){
     try {
         const {data} = await axios(urlLoc);
