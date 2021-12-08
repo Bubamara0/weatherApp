@@ -1,12 +1,6 @@
-require('dotenv').config()
-
 const axios = require('axios')
 const foreCast = require('./forecast.js')
 
-// const db = require('db')
-// db.connect({
-//   key : process.env.DB_KEY
-// })
 
 const geoCode = async (cityName) => {
     const urlLoc = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=fecb63f5e33ead6599ddb965cb4f41bf`; 
@@ -26,6 +20,7 @@ const geoCode = async (cityName) => {
 }
 
 module.exports = geoCode;
+
 
 
 
